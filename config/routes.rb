@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     resource :user, only: [:show] do
       get 'tasks', on: :collection
     end
-
+    resources :kevins, only: [:index]
   end
   
   namespace 'admin' do
