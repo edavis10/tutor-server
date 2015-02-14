@@ -6,14 +6,14 @@ module Api::V1
     property :field1,
              type: Integer,
              readable: true,
-             writeable: false,
+             writeable: true,
              schema_info: {
                description: "field1"
              }
 
     collection :field2,
                readable: true,
-               writeable: false,
+               writeable: true,
                schema_info: {
                  description: "field2"
                }

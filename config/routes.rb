@@ -29,9 +29,11 @@ Rails.application.routes.draw do
     resource :user, only: [:show] do
       get 'tasks', on: :collection
     end
-    resources :kevins, only: [:index]
+    resources :kevins, only: [:index] do
+      post 'convert', on: :collection
+    end
   end
-  
+
   namespace 'admin' do
     get '/', controller: 'console', action: 'index'
 

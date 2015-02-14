@@ -8,4 +8,10 @@ describe Api::V1::KevinsController, :type => :routing, :api => true, :version =>
     end
   end
 
+  describe "/api/kevins/convert" do
+    it "routes to #convert" do
+      expect(post '/api/kevins/convert').to route_to('api/v1/kevins#convert', format: 'json')
+    end
+  end
+
 end
