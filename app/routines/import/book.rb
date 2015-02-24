@@ -46,7 +46,7 @@ module Import
     end
 
     def construct_path(parent_book, path_index)
-      if parent_book.respond_to?(:path) && !parent_book.path.blank?
+      if parent_book.respond_to?(:path) && parent_book.path.present?
         path = "#{parent_book.path}"
         path += ".#{path_index + 1}" if path_index
         path
